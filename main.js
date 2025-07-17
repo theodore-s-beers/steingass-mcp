@@ -142,11 +142,13 @@ class SteingassMCP {
         })
         .join("\n---\n");
 
+      const countWord = data.length === 1 ? "entry" : "entries";
+
       return {
         content: [
           {
             type: "text",
-            text: `Found ${data.length} entries for "${term}":\n\n${formattedResults}`,
+            text: `Found ${data.length} ${countWord} for "${term}":\n\n${formattedResults}`,
           },
         ],
       };
