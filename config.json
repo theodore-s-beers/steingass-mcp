@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "steingass-dictionary": {
-      "command": "node",
+      "command": "/abs/path/to/node",
       "args": ["/abs/path/to/steingass-mcp/main.js"]
     }
   }
