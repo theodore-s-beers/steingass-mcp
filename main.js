@@ -29,7 +29,7 @@ class SteingassMCP {
           {
             name: "search_dictionary",
             description:
-              "Search Steingass' Persian-English dictionary for Persian words and their definitions",
+              "Search Steingass’ Persian-English dictionary for Persian words and their definitions",
             inputSchema: {
               type: "object",
               properties: {
@@ -98,7 +98,7 @@ class SteingassMCP {
             content: [
               {
                 type: "text",
-                text: `No entries found for "${term}" in the specified field`,
+                text: `No entries found for “${term}” in the specified field`,
               },
             ],
           };
@@ -125,7 +125,7 @@ class SteingassMCP {
           content: [
             {
               type: "text",
-              text: `No entries found for "${term}" in the specified field`,
+              text: `No entries found for “${term}” in the specified field`,
             },
           ],
         };
@@ -148,7 +148,7 @@ class SteingassMCP {
         content: [
           {
             type: "text",
-            text: `Found ${data.length} ${countWord} for "${term}":\n\n${formattedResults}`,
+            text: `Found ${data.length} ${countWord} for “${term}”:\n\n${formattedResults}`,
           },
         ],
       };
