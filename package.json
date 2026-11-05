@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "MCP server for the Steingass Persian-English dictionary",
   "keywords": [
+    "dictionary",
     "mcp",
     "persian",
-    "dictionary",
     "steingass"
   ],
   "license": "MIT",
@@ -13,19 +13,24 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
+    "check": "pnpm run lint && pnpm run format:check && pnpm test",
     "dev": "node --watch main.js",
-    "format": "prettier --prose-wrap=always --write .",
-    "lint": "eslint .",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint --deny-warnings",
     "start": "node main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test test/*.test.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.29.0"
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.2.1",
-    "globals": "^17.5.0",
-    "prettier": "^3.8.3"
+    "@modelcontextprotocol/client": "^2.4.0",
+    "oxfmt": "^0.76.0",
+    "oxlint": "^1.91.0"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }
